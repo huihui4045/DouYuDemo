@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/wh10.0dimens10.0dp">
+
+    <RelativeLayout
+        android:id="@+id/rlparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/wh20.0dimens20.0dp"
+      >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_radius_top_black"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/wh5.0dimens5.0dp"
+            android:paddingLeft="@dimen/wh50.0dimens50.0dp"
+            android:paddingRight="@dimen/wh10.0dimens10.0dp"
+            android:paddingTop="@dimen/wh5.0dimens5.0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="超人不哭"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="美少女"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <com.team.zhuoke.ui.CustomRoundView
+            android:id="@+id/crvheadimage"
+            android:layout_width="@dimen/wh45.0dimens45.0dp"
+            android:layout_height="@dimen/wh45.0dimens45.0dp"
+            android:src="@mipmap/ic_launcher"
+            app:border_color="@color/colorPrimary"
+            app:border_width="1dp" />
+    </RelativeLayout>
+
+    <com.team.zhuoke.ui.CustomRoundView
+        android:id="@+id/ivgift"
+        android:layout_width="@dimen/wh40.0dimens40.0dp"
+        android:layout_height="@dimen/wh40.0dimens40.0dp"
+        android:layout_toRightOf="@id/rlparent"
+        android:src="@mipmap/ic_launcher" />
+
+    <com.team.zhuoke.ui.MagicTextView
+        android:id="@+id/giftNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/wh5.0dimens5.0dp"
+        android:layout_toRightOf="@+id/ivgift"
+        android:includeFontPadding="false"
+        android:text="x1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:strokeJoinStyle="miter"
+        app:strokecolor="@android:color/white"
+        app:strokewidth="2" />
+
+</RelativeLayout>
